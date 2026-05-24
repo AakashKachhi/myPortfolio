@@ -1,371 +1,748 @@
-<!DOCTYPE html>
+<!doctype html>
 <html class="dark" lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Full-Stack Developer Portfolio</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Aakash Kachhi Portfolio</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap"
+      rel="stylesheet"
+    />
+
     <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary-container": "#3f465c",
-                        "background": "#101415",
-                        "on-tertiary-container": "#1f2a3c",
-                        "tertiary-fixed": "#d8e3fb",
-                        "secondary": "#bec6e0",
-                        "outline-variant": "#424754",
-                        "primary-fixed-dim": "#adc6ff",
-                        "on-secondary": "#283044",
-                        "error-container": "#93000a",
-                        "surface-container-lowest": "#0b0f10",
-                        "inverse-primary": "#005ac2",
-                        "surface-bright": "#363a3b",
-                        "on-background": "#e0e3e5",
-                        "surface-variant": "#323537",
-                        "on-primary-fixed-variant": "#004395",
-                        "inverse-on-surface": "#2d3133",
-                        "on-surface-variant": "#c2c6d6",
-                        "primary": "#adc6ff",
-                        "tertiary": "#bcc7de",
-                        "inverse-surface": "#e0e3e5",
-                        "on-error": "#690005",
-                        "tertiary-fixed-dim": "#bcc7de",
-                        "on-primary-container": "#00285d",
-                        "on-tertiary-fixed": "#111c2d",
-                        "surface-container-highest": "#323537",
-                        "surface-container-high": "#272a2c",
-                        "on-tertiary-fixed-variant": "#3c475a",
-                        "primary-container": "#4d8eff",
-                        "secondary-fixed": "#dae2fd",
-                        "on-secondary-container": "#adb4ce",
-                        "on-primary-fixed": "#001a42",
-                        "on-primary": "#002e6a",
-                        "on-error-container": "#ffdad6",
-                        "surface-container-low": "#191c1e",
-                        "surface-dim": "#101415",
-                        "on-tertiary": "#263143",
-                        "on-secondary-fixed": "#131b2e",
-                        "outline": "#8c909f",
-                        "secondary-fixed-dim": "#bec6e0",
-                        "on-secondary-fixed-variant": "#3f465c",
-                        "surface-container": "#1d2022",
-                        "surface-tint": "#adc6ff",
-                        "error": "#ffb4ab",
-                        "on-surface": "#e0e3e5",
-                        "primary-fixed": "#d8e2ff",
-                        "surface": "#101415",
-                        "tertiary-container": "#8691a7"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "spacing": {
-                        "margin-mobile": "16px",
-                        "margin-desktop": "48px",
-                        "stack-md": "24px",
-                        "unit": "4px",
-                        "stack-lg": "64px",
-                        "container-max": "1280px",
-                        "gutter": "24px",
-                        "stack-sm": "12px"
-                    },
-                    "fontFamily": {
-                        "display-lg": ["Geist"],
-                        "code-sm": ["JetBrains Mono"],
-                        "display-lg-mobile": ["Geist"],
-                        "headline-md": ["Geist"],
-                        "headline-sm": ["Geist"],
-                        "body-lg": ["Inter"],
-                        "label-md": ["JetBrains Mono"],
-                        "body-md": ["Inter"]
-                    },
-                    "fontSize": {
-                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "code-sm": ["13px", { "lineHeight": "1.5", "fontWeight": "400" }],
-                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
-                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
-                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
-                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
-                        "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500" }],
-                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }]
-                    }
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "secondary-container": "#3f465c",
+              background: "#101415",
+              "on-tertiary-container": "#1f2a3c",
+              "tertiary-fixed": "#d8e3fb",
+              secondary: "#bec6e0",
+              "outline-variant": "#424754",
+              "primary-fixed-dim": "#adc6ff",
+              "on-secondary": "#283044",
+              "error-container": "#93000a",
+              "surface-container-lowest": "#0b0f10",
+              "inverse-primary": "#005ac2",
+              "surface-bright": "#363a3b",
+              "on-background": "#e0e3e5",
+              "surface-variant": "#323537",
+              "on-primary-fixed-variant": "#004395",
+              "inverse-on-surface": "#2d3133",
+              "on-surface-variant": "#c2c6d6",
+              primary: "#adc6ff",
+              tertiary: "#bcc7de",
+              "inverse-surface": "#e0e3e5",
+              "on-error": "#690005",
+              "tertiary-fixed-dim": "#bcc7de",
+              "on-primary-container": "#00285d",
+              "on-tertiary-fixed": "#111c2d",
+              "surface-container-highest": "#323537",
+              "surface-container-high": "#272a2c",
+              "on-tertiary-fixed-variant": "#3c475a",
+              "primary-container": "#4d8eff",
+              "secondary-fixed": "#dae2fd",
+              "on-secondary-container": "#adb4ce",
+              "on-primary-fixed": "#001a42",
+              "on-primary": "#002e6a",
+              "on-error-container": "#ffdad6",
+              "surface-container-low": "#191c1e",
+              "surface-dim": "#101415",
+              "on-tertiary": "#263143",
+              "on-secondary-fixed": "#131b2e",
+              outline: "#8c909f",
+              "secondary-fixed-dim": "#bec6e0",
+              "on-secondary-fixed-variant": "#3f465c",
+              "surface-container": "#1d2022",
+              "surface-tint": "#adc6ff",
+              error: "#ffb4ab",
+              "on-surface": "#e0e3e5",
+              "primary-fixed": "#d8e2ff",
+              surface: "#101415",
+              "tertiary-container": "#8691a7",
             },
-        }
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              full: "9999px",
+            },
+            spacing: {
+              "margin-mobile": "16px",
+              "margin-desktop": "48px",
+              "stack-md": "24px",
+              unit: "4px",
+              "stack-lg": "64px",
+              "container-max": "1280px",
+              gutter: "24px",
+              "stack-sm": "12px",
+            },
+            fontFamily: {
+              "display-lg": ["Geist"],
+              "code-sm": ["JetBrains Mono"],
+              "display-lg-mobile": ["Geist"],
+              "headline-md": ["Geist"],
+              "headline-sm": ["Geist"],
+              "body-lg": ["Inter"],
+              "label-md": ["JetBrains Mono"],
+              "body-md": ["Inter"],
+            },
+            fontSize: {
+              "display-lg": [
+                "64px",
+                {
+                  lineHeight: "1.1",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "code-sm": ["13px", { lineHeight: "1.5", fontWeight: "400" }],
+              "display-lg-mobile": [
+                "40px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "-0.02em",
+                  fontWeight: "700",
+                },
+              ],
+              "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+              "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+              "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+              "label-md": [
+                "14px",
+                {
+                  lineHeight: "1.2",
+                  letterSpacing: "0.05em",
+                  fontWeight: "500",
+                },
+              ],
+              "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+            },
+          },
+        },
+      }
     </script>
     <style>
-        html { scroll-behavior: smooth; }
-        /* Added light mode defaults for the body */
-        body { @apply bg-slate-50 text-slate-900 dark:bg-background dark:text-on-background font-body-md text-body-md antialiased transition-colors duration-300; }
-        
-        /* Updated glass-panel to swap to white in light mode */
-        .glass-panel { @apply bg-white/80 dark:bg-surface-container-low/80 backdrop-blur-md border border-slate-200 dark:border-outline-variant/10 shadow-lg transition-colors duration-300; }
-        
-        /* Updated gradient to use standard blue for light mode */
-        .text-gradient { @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-primary dark:to-primary-container; }
-        
-        /* Ambient Hover Glow */
-        .ambient-glow-hover:hover {
-            box-shadow: 0 0 30px 0 rgba(77, 142, 255, 0.15);
-            border-color: rgba(77, 142, 255, 0.5);
-        }
+      html {
+        scroll-behavior: smooth;
+      }
+      /* Added light mode defaults for the body */
+      body {
+        @apply bg-slate-50 text-slate-900 dark:bg-background dark:text-on-background font-body-md text-body-md antialiased transition-colors duration-300;
+      }
 
-        /* Scroll Reveal Animation */
-        .reveal-card {
-            @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
-        }
-        .reveal-card.active {
-            @apply opacity-100 translate-y-0;
-        }
+      /* Updated glass-panel to swap to white in light mode */
+      .glass-panel {
+        @apply bg-white/80 dark:bg-surface-container-low/80 backdrop-blur-md border border-slate-200 dark:border-outline-variant/10 shadow-lg transition-colors duration-300;
+      }
 
-        /* Name Animation */
-        @keyframes tracking-expand {
-            0% { letter-spacing: -0.05em; opacity: 0; transform: translateY(10px); }
-            100% { letter-spacing: 0.05em; opacity: 1; transform: translateY(0); }
+      /* Updated gradient to use standard blue for light mode */
+      .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-primary dark:to-primary-container;
+      }
+
+      /* Ambient Hover Glow */
+      .ambient-glow-hover:hover {
+        box-shadow: 0 0 30px 0 rgba(77, 142, 255, 0.15);
+        border-color: rgba(77, 142, 255, 0.5);
+      }
+
+      /* Scroll Reveal Animation */
+      .reveal-card {
+        @apply opacity-0 translate-y-8 transition-all duration-700 ease-out;
+      }
+      .reveal-card.active {
+        @apply opacity-100 translate-y-0;
+      }
+
+      /* Name Animation */
+      @keyframes tracking-expand {
+        0% {
+          letter-spacing: -0.05em;
+          opacity: 0;
+          transform: translateY(10px);
         }
-        .animate-tracking-expand {
-            animation: tracking-expand 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+        100% {
+          letter-spacing: 0.05em;
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
+      .animate-tracking-expand {
+        animation: tracking-expand 1.2s cubic-bezier(0.215, 0.61, 0.355, 1)
+          forwards;
+      }
     </style>
-</head>
-<body class="bg-slate-50 text-slate-900 dark:bg-background dark:text-on-background min-h-screen flex flex-col">
+  </head>
+  <body
+    class="bg-slate-50 text-slate-900 dark:bg-background dark:text-on-background min-h-screen flex flex-col"
+  >
     <!-- TopNavBar -->
-    <nav class="fixed top-0 w-full z-50 bg-white/90 dark:bg-background/80 backdrop-blur-md border-b border-slate-200 dark:border-outline-variant/10 shadow-sm dark:shadow-none transition-colors duration-300" id="navbar">
-        <div class="flex justify-between items-center h-16 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <a class="text-headline-sm font-headline-sm font-bold text-slate-900 dark:text-on-background transition-colors" href="#">DevPortfolio</a>
-            <div class="hidden md:flex gap-gutter items-center">
-                <a class="text-blue-600 dark:text-primary font-bold border-b-2 border-blue-600 dark:border-primary pb-1 font-body-md text-body-md transition-colors" href="#about">About</a>
-                <a class="text-slate-600 dark:text-on-surface-variant hover:text-blue-600 dark:hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95 transition-all duration-200" href="#skills">Skills</a>
-                <a class="text-slate-600 dark:text-on-surface-variant hover:text-blue-600 dark:hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95 transition-all duration-200" href="#projects">Projects</a>
-                <a class="text-slate-600 dark:text-on-surface-variant hover:text-blue-600 dark:hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95 transition-all duration-200" href="#contact">Contact</a>
-            </div>
-            <div class="flex items-center gap-stack-sm">
-                <button aria-label="Toggle Theme" class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors text-slate-700 dark:text-primary cursor-pointer active:scale-95 transition-all duration-200" id="theme-toggle">
-                    <span class="material-symbols-outlined" data-icon="dark_mode">dark_mode</span>
-                </button>
-                <button aria-label="Menu" class="md:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors text-slate-700 dark:text-primary cursor-pointer active:scale-95 transition-all duration-200">
-                    <span class="material-symbols-outlined" data-icon="menu">menu</span>
-                </button>
-            </div>
+    <nav
+      class="fixed top-0 w-full z-50 bg-white/90 dark:bg-background/80 backdrop-blur-md border-b border-slate-200 dark:border-outline-variant/10 shadow-sm dark:shadow-none transition-colors duration-300"
+      id="navbar"
+    >
+      <div
+        class="flex justify-between items-center h-16 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop"
+      >
+        <a
+          class="text-headline-sm font-headline-sm font-bold text-slate-900 dark:text-on-background transition-colors"
+          href="#"
+          >DevPortfolio</a
+        >
+        <div class="hidden md:flex gap-gutter items-center">
+          <a
+            class="text-blue-600 dark:text-primary font-bold border-b-2 border-blue-600 dark:border-primary pb-1 font-body-md text-body-md transition-colors"
+            href="#about"
+            >About</a
+          >
+          <a
+            class="text-slate-600 dark:text-on-surface-variant hover:text-blue-600 dark:hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95 transition-all duration-200"
+            href="#skills"
+            >Skills</a
+          >
+          <a
+            class="text-slate-600 dark:text-on-surface-variant hover:text-blue-600 dark:hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95 transition-all duration-200"
+            href="#projects"
+            >Projects</a
+          >
+          <a
+            class="text-slate-600 dark:text-on-surface-variant hover:text-blue-600 dark:hover:text-primary transition-colors font-body-md text-body-md cursor-pointer active:scale-95 transition-all duration-200"
+            href="#contact"
+            >Contact</a
+          >
         </div>
+        <div class="flex items-center gap-stack-sm">
+          <button
+            aria-label="Toggle Theme"
+            class="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors text-slate-700 dark:text-primary cursor-pointer active:scale-95 transition-all duration-200"
+            id="theme-toggle"
+          >
+            <span class="material-symbols-outlined" data-icon="dark_mode"
+              >dark_mode</span
+            >
+          </button>
+          <button
+            aria-label="Menu"
+            class="md:hidden p-2 rounded-full hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors text-slate-700 dark:text-primary cursor-pointer active:scale-95 transition-all duration-200"
+          >
+            <span class="material-symbols-outlined" data-icon="menu">menu</span>
+          </button>
+        </div>
+      </div>
     </nav>
-    <main class="flex-grow pt-24 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full space-y-stack-lg">
-        
-        <!-- Hero Section -->
-        <section class="min-h-[819px] flex flex-col md:flex-row items-center justify-center gap-stack-lg" id="about">
-            <div class="flex-1 space-y-stack-md relative z-10">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-primary-container/10 border border-blue-200 dark:border-primary-container/20 text-blue-800 dark:text-primary font-label-md text-label-md transition-colors">
-                    <span class="w-2 h-2 rounded-full bg-blue-600 dark:bg-primary animate-pulse"></span>
-                    Available for new opportunities
-                </div>
-                <div>
-                    <h2 class="font-display-lg text-headline-sm md:text-headline-md text-blue-600 dark:text-[#3b82f6] animate-tracking-expand opacity-0 mb-2 transition-colors">Aakash Kachhi</h2>
-                    <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-slate-900 dark:text-on-background transition-colors">
-                        Building <span class="text-gradient">Robust</span> Digital Experiences.
-                    </h1>
-                </div>
-                <p class="font-body-lg text-body-lg text-slate-600 dark:text-on-surface-variant max-w-2xl leading-relaxed transition-colors">
-                    Expert Full-Stack Developer specializing in frontend (React, Tailwind CSS) and robust backend systems (Node.js, Express, MongoDB/SQL). I craft elegant solutions to complex technical problems.
-                </p>
-                <div class="flex flex-wrap gap-4 pt-4">
-                    <a class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 dark:bg-primary text-white dark:text-[#ffffff] rounded-DEFAULT font-label-md text-label-md hover:bg-blue-700 dark:hover:bg-primary-container transition-colors duration-200 shadow-lg shadow-blue-600/20 dark:shadow-primary/20" href="#projects">
-                        View My Work
-                    </a>
-                    <a class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 dark:border-outline-variant text-slate-900 dark:text-on-background rounded-DEFAULT font-label-md text-label-md hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors duration-200" href="#contact">
-                        Contact Me
-                    </a>
-                </div>
-            </div>
-            <div class="flex-1 flex justify-center md:justify-end relative">
-                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden glass-panel ambient-glow-hover transition-all duration-500 z-10">
-                    <img alt="Professional studio portrait of Aakash Kachhi" class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy6VdyfdYGOYf5ktdDcwvycCdAtxvFPd0ScjsA2KaKg2FmSRrR7ZRukNkJZ3lYQspH2zb-Jb6Ki1Skqi7Cqnu5UTt9tWjOT3NdAlFxtFtzdYy-GFOG7ceDIriflOe0dHnZKNIhSVOBzNX5oJChYp-mLOhirgIQDisaTqxh5du5Mcc4HnsEYMYsJ-aSCnHA_9aCOQQMrS8yzGe3ykUqa-98Q9UrN9QBitYD5Th6s8bc2YIodUoZHfEzspGXNXUR5bCr55Bi0zGiKoEw"/>
-                </div>
-                <!-- Abstract background element -->
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-500/10 dark:from-primary/10 to-transparent rounded-full blur-3xl -z-10 transition-colors"></div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="space-y-stack-md pt-stack-md" id="skills">
-            <h2 class="font-headline-md text-headline-md text-slate-900 dark:text-on-background flex items-center gap-4 transition-colors">
-                <span class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full"></span>
-                Technical Arsenal
+    <main
+      class="flex-grow pt-24 pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full space-y-stack-lg"
+    >
+      <!-- Hero Section -->
+      <section
+        class="min-h-[819px] flex flex-col md:flex-row items-center justify-center gap-stack-lg"
+        id="about"
+      >
+        <div class="flex-1 space-y-stack-md relative z-10">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-primary-container/10 border border-blue-200 dark:border-primary-container/20 text-blue-800 dark:text-primary font-label-md text-label-md transition-colors"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-blue-600 dark:bg-primary animate-pulse"
+            ></span>
+            Available for new opportunities
+          </div>
+          <div>
+            <h2
+              class="font-display-lg text-headline-sm md:text-headline-md text-blue-600 dark:text-[#3b82f6] animate-tracking-expand opacity-0 mb-2 transition-colors"
+            >
+              Aakash Kachhi
             </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-                <!-- Frontend Bento Card -->
-                <div class="glass-panel rounded-xl p-8 space-y-6 ambient-glow-hover transition-all duration-300 reveal-card">
-                    <div class="flex items-center gap-3 text-blue-600 dark:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-3xl" data-icon="web">web</span>
-                        <h3 class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background transition-colors">Frontend</h3>
-                    </div>
-                    <p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant transition-colors">Crafting responsive, accessible, and performant user interfaces.</p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">HTML/CSS</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">JavaScript</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">React</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">Tailwind CSS</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">TypeScript</span>
-                    </div>
-                </div>
-                <!-- Backend Bento Card -->
-                <div class="glass-panel rounded-xl p-8 space-y-6 ambient-glow-hover transition-all duration-300 reveal-card">
-                    <div class="flex items-center gap-3 text-blue-600 dark:text-primary transition-colors">
-                        <span class="material-symbols-outlined text-3xl" data-icon="dns">dns</span>
-                        <h3 class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background transition-colors">Backend</h3>
-                    </div>
-                    <p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant transition-colors">Architecting scalable APIs and robust database structures.</p>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">Node.js</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">Express</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">MongoDB</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">PostgreSQL</span>
-                        <span class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors">REST APIs</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+            <h1
+              class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-slate-900 dark:text-on-background transition-colors"
+            >
+              Building <span class="text-gradient">Robust</span> Digital
+              Experiences.
+            </h1>
+          </div>
+          <p
+            class="font-body-lg text-body-lg text-slate-600 dark:text-on-surface-variant max-w-2xl leading-relaxed transition-colors"
+          >
+            Expert Full-Stack Developer specializing in frontend (React,
+            Tailwind CSS) and robust backend systems (Node.js, Express,
+            MongoDB/SQL). I craft elegant solutions to complex technical
+            problems.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-4">
+            <a
+              class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 dark:bg-primary text-white dark:text-[#ffffff] rounded-DEFAULT font-label-md text-label-md hover:bg-blue-700 dark:hover:bg-primary-container transition-colors duration-200 shadow-lg shadow-blue-600/20 dark:shadow-primary/20"
+              href="#projects"
+            >
+              View My Work
+            </a>
+            <a
+              class="inline-flex items-center justify-center px-6 py-3 border border-slate-300 dark:border-outline-variant text-slate-900 dark:text-on-background rounded-DEFAULT font-label-md text-label-md hover:bg-slate-100 dark:hover:bg-surface-container-high transition-colors duration-200"
+              href="#contact"
+            >
+              Contact Me
+            </a>
+          </div>
+        </div>
+        <div class="flex-1 flex justify-center md:justify-end relative">
+          <div
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-xl overflow-hidden glass-panel ambient-glow-hover transition-all duration-500 z-10"
+          >
+            <img
+              alt="Professional studio portrait of Aakash Kachhi"
+              class="w-full h-full object-cover opacity-90 hover:opacity-100 transition-opacity grayscale hover:grayscale-0 duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy6VdyfdYGOYf5ktdDcwvycCdAtxvFPd0ScjsA2KaKg2FmSRrR7ZRukNkJZ3lYQspH2zb-Jb6Ki1Skqi7Cqnu5UTt9tWjOT3NdAlFxtFtzdYy-GFOG7ceDIriflOe0dHnZKNIhSVOBzNX5oJChYp-mLOhirgIQDisaTqxh5du5Mcc4HnsEYMYsJ-aSCnHA_9aCOQQMrS8yzGe3ykUqa-98Q9UrN9QBitYD5Th6s8bc2YIodUoZHfEzspGXNXUR5bCr55Bi0zGiKoEw"
+            />
+          </div>
+          <!-- Abstract background element -->
+          <div
+            class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gradient-to-tr from-blue-500/10 dark:from-primary/10 to-transparent rounded-full blur-3xl -z-10 transition-colors"
+          ></div>
+        </div>
+      </section>
 
-        <!-- Projects Section -->
-        <section class="space-y-stack-md pt-stack-md" id="projects">
-            <h2 class="font-headline-md text-headline-md text-slate-900 dark:text-on-background flex items-center gap-4 transition-colors">
-                <span class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full"></span>
-                Selected Projects
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-                <!-- Project Card 1 -->
-                <div class="group glass-panel rounded-xl overflow-hidden flex flex-col ambient-glow-hover transition-all duration-300 reveal-card">
-                    <div class="relative h-48 overflow-hidden">
-                        <img alt="E-commerce Platform Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9p3d49dMIOtOTvIDFd5CGHFKjlUIYXBij2R8mGtIfegUfwlifEjqfizD5ACoIoy1JtMyaGTL2pKXAlprBMHRo5Zhxf0TdO4GwlY9GbsLpFYW7_QP-encp1O4Wlm4f2LXyAi4M0keE3RJDFSgsus0ICmzduygvez7zDS7UexySwrmdGeZElSDd1rpwgw_fYz84YG0my4e_0a15P5hzAcvNU8mRnACotsaQCHeVCCQ-k05TSkkipefsgPp7TlEugHMICWCPHNM_IUPA"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-surface-container-low to-transparent opacity-80"></div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col space-y-4">
-                        <h3 class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background group-hover:text-blue-600 dark:group-hover:text-primary transition-colors">Nexus E-Commerce</h3>
-                        <p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant flex-grow transition-colors">A full-stack e-commerce solution featuring real-time inventory management, secure payment processing, and an intuitive admin dashboard.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">React</span>
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">Node.js</span>
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">MongoDB</span>
-                        </div>
-                        <div class="flex gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-outline-variant/10">
-                            <a class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors" href="#">
-                                <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span> Live Demo
-                            </a>
-                            <a class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors" href="#">
-                                <span class="material-symbols-outlined text-sm" data-icon="code">code</span> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card 2 -->
-                <div class="group glass-panel rounded-xl overflow-hidden flex flex-col ambient-glow-hover transition-all duration-300 reveal-card">
-                    <div class="relative h-48 overflow-hidden">
-                        <img alt="Analytics Dashboard" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBub3vyeOOsUZLt9YONLGAaXYekhc5b5jIsHlOJpjbEmpOv2rmnJfeDqNGWmOb4pTTn2dQVsZ28onfIDO7MsqHJ_OIZvXB28lEU5u9pMgd4sxk1CrM22t6LR6TheFdLHrDEr-zO69hoi-7IWlFn9FxoAmLa9YCvF4-BkqhFmLku10BniiVTDFhx0ON3-fR5BmWfQcV6ApMn7W866bA8e6AccLfjWupL7aHN88rVKz4Ik9Og5Geb22Y1sexP6aZHGnBEA3rovXbIyqJH"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-surface-container-low to-transparent opacity-80"></div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col space-y-4">
-                        <h3 class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background group-hover:text-blue-600 dark:group-hover:text-primary transition-colors">DataViz Pro</h3>
-                        <p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant flex-grow transition-colors">Interactive analytics platform that processes massive datasets into readable, interactive charts and customizable reports.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">Vue.js</span>
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">Express</span>
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">PostgreSQL</span>
-                        </div>
-                        <div class="flex gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-outline-variant/10">
-                            <a class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors" href="#">
-                                <span class="material-symbols-outlined text-sm" data-icon="open_in_new">open_in_new</span> Live Demo
-                            </a>
-                            <a class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors" href="#">
-                                <span class="material-symbols-outlined text-sm" data-icon="code">code</span> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Project Card 3 -->
-                <div class="group glass-panel rounded-xl overflow-hidden flex flex-col ambient-glow-hover transition-all duration-300 reveal-card">
-                    <div class="relative h-48 overflow-hidden">
-                        <img alt="Code Editor Interface" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9u6x5eUd5sPPAlmtxEpniK26sj7W4vieYpQ1YpmylosTBslUXkHZEKmzUYCf0evedOItoieFSvr5MbPJ182st6vXEiPyM2170ua3iK6cdvzqFgdqUORIxZrnTgNpiIkmMBMHZ9X93KIKpWYjh6Poq5jSkufIvZvXKaWKVLs9r_iWNxuA_gFteJwJkEOxfgTc9Z1BhHz1W8duH-PlTp3d2MSD8L7gvPLVS9HvNVBi5Geg1PoqvDwiqiaGPp5z72ZeFTmnfyphsH1ej"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-white dark:from-surface-container-low to-transparent opacity-80"></div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col space-y-4">
-                        <h3 class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background group-hover:text-blue-600 dark:group-hover:text-primary transition-colors">TaskMaster API</h3>
-                        <p class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant flex-grow transition-colors">A high-performance RESTful API for task management systems, featuring JWT authentication, rate limiting, and comprehensive documentation.</p>
-                        <div class="flex flex-wrap gap-2 pt-2">
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">Node.js</span>
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">Redis</span>
-                            <span class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors">Docker</span>
-                        </div>
-                        <div class="flex gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-outline-variant/10">
-                            <a class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors" href="#">
-                                <span class="material-symbols-outlined text-sm" data-icon="menu_book">menu_book</span> Docs
-                            </a>
-                            <a class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors" href="#">
-                                <span class="material-symbols-outlined text-sm" data-icon="code">code</span> Source
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <!-- Skills Section -->
+      <section class="space-y-stack-md pt-stack-md" id="skills">
+        <h2
+          class="font-headline-md text-headline-md text-slate-900 dark:text-on-background flex items-center gap-4 transition-colors"
+        >
+          <span class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full"></span>
+          Technical Arsenal
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+          <!-- Frontend Bento Card -->
+          <div
+            class="glass-panel rounded-xl p-8 space-y-6 ambient-glow-hover transition-all duration-300 reveal-card"
+          >
+            <div
+              class="flex items-center gap-3 text-blue-600 dark:text-primary transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl" data-icon="web"
+                >web</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background transition-colors"
+              >
+                Frontend
+              </h3>
             </div>
-        </section>
+            <p
+              class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant transition-colors"
+            >
+              Crafting responsive, accessible, and performant user interfaces.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >HTML/CSS</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >JavaScript</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >React</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >Tailwind CSS</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >TypeScript</span
+              >
+            </div>
+          </div>
+          <!-- Backend Bento Card -->
+          <div
+            class="glass-panel rounded-xl p-8 space-y-6 ambient-glow-hover transition-all duration-300 reveal-card"
+          >
+            <div
+              class="flex items-center gap-3 text-blue-600 dark:text-primary transition-colors"
+            >
+              <span class="material-symbols-outlined text-3xl" data-icon="dns"
+                >dns</span
+              >
+              <h3
+                class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background transition-colors"
+              >
+                Backend
+              </h3>
+            </div>
+            <p
+              class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant transition-colors"
+            >
+              Architecting scalable APIs and robust database structures.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >Node.js</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >Express</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >MongoDB</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >PostgreSQL</span
+              >
+              <span
+                class="px-4 py-2 bg-blue-50 dark:bg-primary/10 text-blue-700 dark:text-primary rounded-lg font-label-md text-label-md border border-blue-200 dark:border-primary/20 transition-colors"
+                >REST APIs</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section class="space-y-stack-md pt-stack-md pb-stack-lg" id="contact">
-            <div class="max-w-3xl mx-auto w-full reveal-card">
-                <h2 class="font-headline-md text-headline-md text-slate-900 dark:text-on-background flex items-center gap-4 justify-center mb-2 transition-colors">
-                    <span class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full hidden sm:block"></span>
-                    Get In Touch
-                    <span class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full hidden sm:block"></span>
-                </h2>
-                <p class="text-center text-slate-600 dark:text-on-surface-variant font-body-md text-body-md mb-8 transition-colors">Let's build something together.</p>
-                <form class="glass-panel p-8 rounded-xl space-y-6">
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div class="space-y-2">
-                            <label class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors" for="name">Name</label>
-                            <input class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors" id="name" placeholder="John Doe" type="text"/>
-                        </div>
-                        <div class="space-y-2">
-                            <label class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors" for="email">Email</label>
-                            <input class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors" id="email" placeholder="john@example.com" type="email"/>
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors" for="subject">Subject</label>
-                        <input class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors" id="subject" placeholder="Project Inquiry" type="text"/>
-                    </div>
-                    <div class="space-y-2">
-                        <label class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors" for="message">Message</label>
-                        <textarea class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors h-32 resize-none" id="message" placeholder="How can I help you?"></textarea>
-                    </div>
-                    <button class="w-full bg-blue-600 dark:bg-primary text-white dark:text-[#ffffff] font-label-md text-label-md py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-primary-container transition-colors duration-300 shadow-lg shadow-blue-600/20 dark:shadow-primary/20" type="button">
-                        Send Message
-                    </button>
-                </form>
+      <!-- Projects Section -->
+      <section class="space-y-stack-md pt-stack-md" id="projects">
+        <h2
+          class="font-headline-md text-headline-md text-slate-900 dark:text-on-background flex items-center gap-4 transition-colors"
+        >
+          <span class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full"></span>
+          Selected Projects
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          <!-- Project Card 1 -->
+          <div
+            class="group glass-panel rounded-xl overflow-hidden flex flex-col ambient-glow-hover transition-all duration-300 reveal-card"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                alt="E-commerce Platform Dashboard"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9p3d49dMIOtOTvIDFd5CGHFKjlUIYXBij2R8mGtIfegUfwlifEjqfizD5ACoIoy1JtMyaGTL2pKXAlprBMHRo5Zhxf0TdO4GwlY9GbsLpFYW7_QP-encp1O4Wlm4f2LXyAi4M0keE3RJDFSgsus0ICmzduygvez7zDS7UexySwrmdGeZElSDd1rpwgw_fYz84YG0my4e_0a15P5hzAcvNU8mRnACotsaQCHeVCCQ-k05TSkkipefsgPp7TlEugHMICWCPHNM_IUPA"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-white dark:from-surface-container-low to-transparent opacity-80"
+              ></div>
             </div>
-        </section>
+            <div class="p-6 flex-grow flex flex-col space-y-4">
+              <h3
+                class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background group-hover:text-blue-600 dark:group-hover:text-primary transition-colors"
+              >
+                Nexus E-Commerce
+              </h3>
+              <p
+                class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant flex-grow transition-colors"
+              >
+                A full-stack e-commerce solution featuring real-time inventory
+                management, secure payment processing, and an intuitive admin
+                dashboard.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >React</span
+                >
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >Node.js</span
+                >
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >MongoDB</span
+                >
+              </div>
+              <div
+                class="flex gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-outline-variant/10"
+              >
+                <a
+                  class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors"
+                  href="#"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="open_in_new"
+                    >open_in_new</span
+                  >
+                  Live Demo
+                </a>
+                <a
+                  class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors"
+                  href="#"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="code"
+                    >code</span
+                  >
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 2 -->
+          <div
+            class="group glass-panel rounded-xl overflow-hidden flex flex-col ambient-glow-hover transition-all duration-300 reveal-card"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                alt="Analytics Dashboard"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBub3vyeOOsUZLt9YONLGAaXYekhc5b5jIsHlOJpjbEmpOv2rmnJfeDqNGWmOb4pTTn2dQVsZ28onfIDO7MsqHJ_OIZvXB28lEU5u9pMgd4sxk1CrM22t6LR6TheFdLHrDEr-zO69hoi-7IWlFn9FxoAmLa9YCvF4-BkqhFmLku10BniiVTDFhx0ON3-fR5BmWfQcV6ApMn7W866bA8e6AccLfjWupL7aHN88rVKz4Ik9Og5Geb22Y1sexP6aZHGnBEA3rovXbIyqJH"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-white dark:from-surface-container-low to-transparent opacity-80"
+              ></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col space-y-4">
+              <h3
+                class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background group-hover:text-blue-600 dark:group-hover:text-primary transition-colors"
+              >
+                DataViz Pro
+              </h3>
+              <p
+                class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant flex-grow transition-colors"
+              >
+                Interactive analytics platform that processes massive datasets
+                into readable, interactive charts and customizable reports.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >Vue.js</span
+                >
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >Express</span
+                >
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >PostgreSQL</span
+                >
+              </div>
+              <div
+                class="flex gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-outline-variant/10"
+              >
+                <a
+                  class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors"
+                  href="#"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="open_in_new"
+                    >open_in_new</span
+                  >
+                  Live Demo
+                </a>
+                <a
+                  class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors"
+                  href="#"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="code"
+                    >code</span
+                  >
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Project Card 3 -->
+          <div
+            class="group glass-panel rounded-xl overflow-hidden flex flex-col ambient-glow-hover transition-all duration-300 reveal-card"
+          >
+            <div class="relative h-48 overflow-hidden">
+              <img
+                alt="Code Editor Interface"
+                class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9u6x5eUd5sPPAlmtxEpniK26sj7W4vieYpQ1YpmylosTBslUXkHZEKmzUYCf0evedOItoieFSvr5MbPJ182st6vXEiPyM2170ua3iK6cdvzqFgdqUORIxZrnTgNpiIkmMBMHZ9X93KIKpWYjh6Poq5jSkufIvZvXKaWKVLs9r_iWNxuA_gFteJwJkEOxfgTc9Z1BhHz1W8duH-PlTp3d2MSD8L7gvPLVS9HvNVBi5Geg1PoqvDwiqiaGPp5z72ZeFTmnfyphsH1ej"
+              />
+              <div
+                class="absolute inset-0 bg-gradient-to-t from-white dark:from-surface-container-low to-transparent opacity-80"
+              ></div>
+            </div>
+            <div class="p-6 flex-grow flex flex-col space-y-4">
+              <h3
+                class="font-headline-sm text-headline-sm text-slate-900 dark:text-on-background group-hover:text-blue-600 dark:group-hover:text-primary transition-colors"
+              >
+                TaskMaster API
+              </h3>
+              <p
+                class="font-body-md text-body-md text-slate-600 dark:text-on-surface-variant flex-grow transition-colors"
+              >
+                A high-performance RESTful API for task management systems,
+                featuring JWT authentication, rate limiting, and comprehensive
+                documentation.
+              </p>
+              <div class="flex flex-wrap gap-2 pt-2">
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >Node.js</span
+                >
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >Redis</span
+                >
+                <span
+                  class="text-xs font-code-sm text-code-sm text-blue-700 dark:text-primary bg-blue-50 dark:bg-primary/5 px-2 py-1 rounded transition-colors"
+                  >Docker</span
+                >
+              </div>
+              <div
+                class="flex gap-4 mt-4 pt-4 border-t border-slate-200 dark:border-outline-variant/10"
+              >
+                <a
+                  class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors"
+                  href="#"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="menu_book"
+                    >menu_book</span
+                  >
+                  Docs
+                </a>
+                <a
+                  class="font-label-md text-label-md text-slate-700 dark:text-on-background hover:text-blue-600 dark:hover:text-primary flex items-center gap-1 transition-colors"
+                  href="#"
+                >
+                  <span
+                    class="material-symbols-outlined text-sm"
+                    data-icon="code"
+                    >code</span
+                  >
+                  Source
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="space-y-stack-md pt-stack-md pb-stack-lg" id="contact">
+        <div class="max-w-3xl mx-auto w-full reveal-card">
+          <h2
+            class="font-headline-md text-headline-md text-slate-900 dark:text-on-background flex items-center gap-4 justify-center mb-2 transition-colors"
+          >
+            <span
+              class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full hidden sm:block"
+            ></span>
+            Get In Touch
+            <span
+              class="w-8 h-1 bg-blue-600 dark:bg-primary rounded-full hidden sm:block"
+            ></span>
+          </h2>
+          <p
+            class="text-center text-slate-600 dark:text-on-surface-variant font-body-md text-body-md mb-8 transition-colors"
+          >
+            Let's build something together.
+          </p>
+          <form class="glass-panel p-8 rounded-xl space-y-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div class="space-y-2">
+                <label
+                  class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors"
+                  for="name"
+                  >Name</label
+                >
+                <input
+                  class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors"
+                  id="name"
+                  placeholder="John Doe"
+                  type="text"
+                />
+              </div>
+              <div class="space-y-2">
+                <label
+                  class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors"
+                  for="email"
+                  >Email</label
+                >
+                <input
+                  class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors"
+                  id="email"
+                  placeholder="john@example.com"
+                  type="email"
+                />
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label
+                class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors"
+                for="subject"
+                >Subject</label
+              >
+              <input
+                class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors"
+                id="subject"
+                placeholder="Project Inquiry"
+                type="text"
+              />
+            </div>
+            <div class="space-y-2">
+              <label
+                class="font-label-md text-label-md text-slate-900 dark:text-on-background block transition-colors"
+                for="message"
+                >Message</label
+              >
+              <textarea
+                class="w-full bg-white dark:bg-surface-container-low border border-slate-300 dark:border-outline-variant/30 rounded-lg px-4 py-3 text-slate-900 dark:text-on-background font-body-md text-body-md focus:outline-none focus:border-blue-500 dark:focus:border-surface-bright focus:ring-1 focus:ring-blue-500 dark:focus:ring-surface-bright transition-colors h-32 resize-none"
+                id="message"
+                placeholder="How can I help you?"
+              ></textarea>
+            </div>
+            <button
+              class="w-full bg-blue-600 dark:bg-primary text-white dark:text-[#ffffff] font-label-md text-label-md py-3 rounded-lg hover:bg-blue-700 dark:hover:bg-primary-container transition-colors duration-300 shadow-lg shadow-blue-600/20 dark:shadow-primary/20"
+              type="button"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="w-full py-stack-md bg-slate-50 dark:bg-surface-container-low border-t border-slate-200 dark:border-outline-variant/10 mt-auto transition-colors duration-300">
-        <div class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-4">
-            <span class="text-label-md font-bold text-slate-900 dark:text-primary transition-colors">© 2024 DevPortfolio. Built with Precision.</span>
-            <div class="flex gap-6">
-                <a class="text-slate-600 dark:text-on-surface-variant font-label-md text-label-md hover:text-blue-600 dark:hover:text-primary underline underline-offset-4 transition-all duration-300 hover:opacity-80" href="#">GitHub</a>
-                <a class="text-slate-600 dark:text-on-surface-variant font-label-md text-label-md hover:text-blue-600 dark:hover:text-primary underline underline-offset-4 transition-all duration-300 hover:opacity-80" href="#">LinkedIn</a>
-                <a class="text-slate-600 dark:text-on-surface-variant font-label-md text-label-md hover:text-blue-600 dark:hover:text-primary underline underline-offset-4 transition-all duration-300 hover:opacity-80" href="#">CodePen</a>
-                <a class="text-slate-600 dark:text-on-surface-variant font-label-md text-label-md hover:text-blue-600 dark:hover:text-primary underline underline-offset-4 transition-all duration-300 hover:opacity-80" href="#">Email</a>
-            </div>
+    <footer
+      class="w-full py-stack-md bg-slate-50 dark:bg-surface-container-low border-t border-slate-200 dark:border-outline-variant/10 mt-auto transition-colors duration-300"
+    >
+      <div
+        class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop gap-4"
+      >
+        <span
+          class="text-label-md font-bold text-slate-900 dark:text-primary transition-colors"
+          >© 2024 DevPortfolio. Built with Precision.</span
+        >
+        <div class="flex gap-6">
+          <a
+            class="text-slate-600 dark:text-on-surface-variant font-label-md text-label-md hover:text-blue-600 dark:hover:text-primary underline underline-offset-4 transition-all duration-300 hover:opacity-80"
+            href="https://github.com/AakashKachhi"
+            >GitHub</a
+          >
+          <a
+            class="text-slate-600 dark:text-on-surface-variant font-label-md text-label-md hover:text-blue-600 dark:hover:text-primary underline underline-offset-4 transition-all duration-300 hover:opacity-80"
+            href="www.linkedin.com/in/
+            aakash-kachhi-8107b1357"
+            >LinkedIn</a
+          >
+          <a
+            class="text-slate-600 dark:text-on-surface-variant font-label-md text-label-md hover:text-blue-600 dark:hover:text-primary underline underline-offset-4 transition-all duration-300 hover:opacity-80"
+            href="https://www.facebook.com/aakash.kachhi.1"
+            >Facebook</a
+          >
         </div>
+      </div>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
